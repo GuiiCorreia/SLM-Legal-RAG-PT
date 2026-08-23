@@ -1,0 +1,1234 @@
+{
+  "experiment": "E3a",
+  "model": "Ministral-8B",
+  "exp_label": "BM25+BR-TaxQA",
+  "judge_a": "meta-llama/Llama-3.3-70B-Instruct",
+  "judge_b": "google/gemini-2.5-flash (DeepInfra)",
+  "n_sample": 150,
+  "seed": 42,
+  "threshold": 0.5,
+  "judge_a_mean": 0.7193,
+  "judge_b_mean": 0.8627,
+  "judge_a_fallback_rate": 0.06,
+  "judge_b_fallback_rate": 0.0733,
+  "judge_a_faithful_rate": 0.8333,
+  "judge_b_faithful_rate": 0.8533,
+  "cohens_kappa": {
+    "kappa": 0.3193,
+    "kappa_ci_lo": 0.1059,
+    "kappa_ci_hi": 0.5221,
+    "p_observed": 0.82,
+    "p_expected": 0.7356,
+    "agreement_rate": 0.82,
+    "n": 150,
+    "confusion": {
+      "tp": 113,
+      "tn": 10,
+      "fp": 15,
+      "fn": 12
+    },
+    "interpretation": "fair"
+  },
+  "per_query": [
+    {
+      "query_id": "PERGUNTA_671",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_201",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_418",
+      "llama_score": 0.0,
+      "gemini_score": 0.9,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_261",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_595",
+      "llama_score": 0.8,
+      "gemini_score": 0.3,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_358",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_666",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_600",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_465",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_162",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_032",
+      "llama_score": 0.8,
+      "gemini_score": 0.9,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_195",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_355",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_284",
+      "llama_score": 0.8,
+      "gemini_score": 0.9,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_031",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_714",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_027",
+      "llama_score": 0.8,
+      "gemini_score": 0.4,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_453",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_099",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_206",
+      "llama_score": 0.2,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_277",
+      "llama_score": 0.8,
+      "gemini_score": 0.7,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_028",
+      "llama_score": 0.9,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_163",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_044",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_538",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_153",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_281",
+      "llama_score": 0.9,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_235",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_204",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_300",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_324",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_326",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_019",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_227",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_098",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_176",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_348",
+      "llama_score": 0.0,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_192",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_113",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_698",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_626",
+      "llama_score": 0.9,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_432",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_076",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_645",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_422",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_133",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_463",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_377",
+      "llama_score": 0.0,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_118",
+      "llama_score": 0.9,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_029",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_594",
+      "llama_score": 0.8,
+      "gemini_score": 0.0,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_582",
+      "llama_score": 0.8,
+      "gemini_score": 0.7,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_641",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_539",
+      "llama_score": 0.8,
+      "gemini_score": 0.8,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_370",
+      "llama_score": 0.8,
+      "gemini_score": 0.7,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_429",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_501",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_390",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_047",
+      "llama_score": 0.2,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_693",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_527",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_306",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_123",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_196",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_588",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_521",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_017",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_212",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_529",
+      "llama_score": 0.9,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_336",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_562",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_400",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_504",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_533",
+      "llama_score": 0.2,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_589",
+      "llama_score": 0.2,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_327",
+      "llama_score": 0.0,
+      "gemini_score": 0.9,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_191",
+      "llama_score": 0.8,
+      "gemini_score": 0.7,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_023",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_479",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_490",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_149",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_242",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_548",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_214",
+      "llama_score": 0.2,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_024",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_522",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_613",
+      "llama_score": 0.8,
+      "gemini_score": 0.7,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_049",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_395",
+      "llama_score": 0.5,
+      "gemini_score": 0.8,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_668",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_042",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_648",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_361",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_672",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_413",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_578",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_561",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_696",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_274",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_272",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_587",
+      "llama_score": 0.5,
+      "gemini_score": 0.6,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_337",
+      "llama_score": 0.8,
+      "gemini_score": 0.0,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_364",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_052",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_342",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_297",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_438",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_381",
+      "llama_score": 0.2,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_344",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_557",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_517",
+      "llama_score": 0.5,
+      "gemini_score": 0.7,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_571",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_084",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_115",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_407",
+      "llama_score": 0.2,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_097",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_320",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_275",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_109",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_058",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_428",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_601",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_486",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_573",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_001",
+      "llama_score": 0.2,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_184",
+      "llama_score": 0.8,
+      "gemini_score": 0.8,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_211",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_233",
+      "llama_score": 0.0,
+      "gemini_score": 0.7,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_596",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_086",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_285",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_128",
+      "llama_score": 0.8,
+      "gemini_score": 0.7,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_143",
+      "llama_score": 0.2,
+      "gemini_score": 0.6,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_256",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_068",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_560",
+      "llama_score": 0.0,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_248",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_323",
+      "llama_score": 0.5,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_426",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_190",
+      "llama_score": 0.5,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_260",
+      "llama_score": 0.2,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_396",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_331",
+      "llama_score": 0.5,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_225",
+      "llama_score": 0.8,
+      "gemini_score": 0.0,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_112",
+      "llama_score": 0.9,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_271",
+      "llama_score": 0.8,
+      "gemini_score": 0.7,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_310",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "PERGUNTA_598",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_074",
+      "llama_score": 0.8,
+      "gemini_score": 0.7,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "PERGUNTA_239",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    }
+  ]
+}

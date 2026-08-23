@@ -1,0 +1,42 @@
+# Datasets (public; download separately — see README)
+*.csv
+bills_dataset.csv
+relevance_feedback_dataset.csv
+data/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+.coverage
+
+# Secrets
+.env
+*.key
+*.pem
+
+# Embedding / model caches (regenerable)
+*.pkl
+**/cache/
+**/ctx_cache/
+.cache/
+huggingface_hub/
+*.safetensors
+*.bin
+*.pt
+
+# Logs
+logs/
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

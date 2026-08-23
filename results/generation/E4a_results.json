@@ -1,0 +1,120 @@
+{
+  "experiment": "E4a",
+  "label": "BM25+NormasTCU",
+  "dataset": "normastcu",
+  "retriever": "bm25",
+  "ndcg": 0.3537,
+  "n_queries": 46,
+  "oracle_model": "Qwen/Qwen2.5-72B-Instruct",
+  "judge_model": "meta-llama/Llama-3.3-70B-Instruct",
+  "models": {
+    "Llama-1B": {
+      "label": "Llama-1B",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "provider": "deepinfra",
+      "n_queries": 46,
+      "bertscore_f1": 0.7042,
+      "rouge_l": 0.264,
+      "faithfulness": 0.4217,
+      "latency_s": 6.824,
+      "tok_in_mean": 3747.5,
+      "tok_out_mean": 316.5
+    },
+    "Llama-3B": {
+      "label": "Llama-3B",
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "provider": "deepinfra",
+      "n_queries": 46,
+      "bertscore_f1": 0.7114,
+      "rouge_l": 0.2769,
+      "faithfulness": 0.4478,
+      "latency_s": 6.58,
+      "tok_in_mean": 3747.5,
+      "tok_out_mean": 335.1
+    },
+    "Gemma3-4B": {
+      "label": "Gemma3-4B",
+      "model": "google/gemma-3-4b-it",
+      "provider": "deepinfra",
+      "n_queries": 46,
+      "bertscore_f1": 0.7709,
+      "rouge_l": 0.3066,
+      "faithfulness": 0.6152,
+      "latency_s": 17.294,
+      "tok_in_mean": 3442.1,
+      "tok_out_mean": 644.3
+    },
+    "Qwen25-7B": {
+      "label": "Qwen25-7B",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "provider": "deepinfra",
+      "n_queries": 46,
+      "bertscore_f1": 0.6969,
+      "rouge_l": 0.2387,
+      "faithfulness": 0.5609,
+      "latency_s": 15.269,
+      "tok_in_mean": 3858.9,
+      "tok_out_mean": 887.7
+    },
+    "Phi4-14B": {
+      "label": "Phi4-14B",
+      "model": "microsoft/phi-4",
+      "provider": "deepinfra",
+      "n_queries": 46,
+      "bertscore_f1": 0.7951,
+      "rouge_l": 0.4031,
+      "faithfulness": 0.4891,
+      "latency_s": 8.408,
+      "tok_in_mean": 3729.0,
+      "tok_out_mean": 496.9
+    },
+    "Gemma4-31B": {
+      "label": "Gemma4-31B",
+      "model": "google/gemma-4-31B-it",
+      "provider": "deepinfra",
+      "n_queries": 46,
+      "bertscore_f1": 0.7847,
+      "rouge_l": 0.3476,
+      "faithfulness": 0.6522,
+      "latency_s": 21.618,
+      "tok_in_mean": 3462.1,
+      "tok_out_mean": 512.9
+    },
+    "Qwen3-8B": {
+      "label": "Qwen3-8B",
+      "model": "qwen/qwen3-8b",
+      "provider": "openrouter",
+      "n_queries": 46,
+      "bertscore_f1": 0.7859,
+      "rouge_l": 0.3486,
+      "faithfulness": 0.5283,
+      "latency_s": 19.674,
+      "tok_in_mean": 3858.9,
+      "tok_out_mean": 1063.3
+    },
+    "Qwen3-8B-NT": {
+      "label": "Qwen3-8B-NT",
+      "model": "qwen/qwen3-8b",
+      "provider": "openrouter:no-thinking",
+      "n_queries": 46,
+      "bertscore_f1": 0.7796,
+      "rouge_l": 0.3429,
+      "faithfulness": 0.487,
+      "latency_s": 17.302,
+      "tok_in_mean": 3858.9,
+      "tok_out_mean": 1056.0
+    },
+    "Ministral-8B": {
+      "label": "Ministral-8B",
+      "model": "mistralai/ministral-8b-2512",
+      "provider": "openrouter",
+      "n_queries": 46,
+      "bertscore_f1": 0.781,
+      "rouge_l": 0.2926,
+      "faithfulness": 0.5543,
+      "latency_s": 9.51,
+      "tok_in_mean": 3655.2,
+      "tok_out_mean": 930.0
+    }
+  }
+}

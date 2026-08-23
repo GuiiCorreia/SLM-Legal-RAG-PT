@@ -1,0 +1,433 @@
+{
+  "experiment": "E1b",
+  "label": "BGE-M3+Ulysses",
+  "alpha": 0.05,
+  "bootstrap_n_iterations": 1000,
+  "models": {
+    "Llama_1B": {
+      "mean": 0.5466,
+      "ci_low": 0.5207,
+      "ci_high": 0.572,
+      "fallback_rate": 0.3488,
+      "n": 668
+    },
+    "Llama_3B": {
+      "mean": 0.538,
+      "ci_low": 0.5138,
+      "ci_high": 0.563,
+      "fallback_rate": 0.3653,
+      "n": 668
+    },
+    "Gemma3_4B": {
+      "mean": 0.6683,
+      "ci_low": 0.6503,
+      "ci_high": 0.685,
+      "fallback_rate": 0.4057,
+      "n": 668
+    },
+    "Qwen25_7B": {
+      "mean": 0.7627,
+      "ci_low": 0.7428,
+      "ci_high": 0.7822,
+      "fallback_rate": 0.1138,
+      "n": 668
+    },
+    "Qwen3_8B": {
+      "mean": 0.7662,
+      "ci_low": 0.7436,
+      "ci_high": 0.7868,
+      "fallback_rate": 0.1257,
+      "n": 668
+    },
+    "Qwen3_8B_NT": {
+      "mean": 0.7612,
+      "ci_low": 0.7409,
+      "ci_high": 0.7826,
+      "fallback_rate": 0.1362,
+      "n": 668
+    },
+    "Ministral_8B": {
+      "mean": 0.7644,
+      "ci_low": 0.7439,
+      "ci_high": 0.7849,
+      "fallback_rate": 0.0539,
+      "n": 668
+    },
+    "Phi4_14B": {
+      "mean": 0.7895,
+      "ci_low": 0.7737,
+      "ci_high": 0.8064,
+      "fallback_rate": 0.1153,
+      "n": 668
+    },
+    "Gemma4_31B": {
+      "mean": 0.7337,
+      "ci_low": 0.7106,
+      "ci_high": 0.7555,
+      "fallback_rate": 0.2695,
+      "n": 668
+    }
+  },
+  "pairwise_wilcoxon": [
+    {
+      "model_a": "Llama_1B",
+      "model_b": "Llama_3B",
+      "W": 9944.5,
+      "p_value": 0.335639,
+      "cohens_d": 0.0331,
+      "significant": false,
+      "stars": "",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Llama_1B",
+      "model_b": "Gemma3_4B",
+      "W": 22074.5,
+      "p_value": 0.0,
+      "cohens_d": -0.3406,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Llama_1B",
+      "model_b": "Qwen25_7B",
+      "W": 12418.0,
+      "p_value": 0.0,
+      "cohens_d": -0.6129,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Llama_1B",
+      "model_b": "Qwen3_8B",
+      "W": 12432.0,
+      "p_value": 0.0,
+      "cohens_d": -0.6059,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Llama_1B",
+      "model_b": "Qwen3_8B_NT",
+      "W": 14610.0,
+      "p_value": 0.0,
+      "cohens_d": -0.584,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Llama_1B",
+      "model_b": "Ministral_8B",
+      "W": 13740.0,
+      "p_value": 0.0,
+      "cohens_d": -0.5939,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Llama_1B",
+      "model_b": "Phi4_14B",
+      "W": 9838.5,
+      "p_value": 0.0,
+      "cohens_d": -0.6825,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Llama_1B",
+      "model_b": "Gemma4_31B",
+      "W": 21765.0,
+      "p_value": 0.0,
+      "cohens_d": -0.4741,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Llama_3B",
+      "model_b": "Gemma3_4B",
+      "W": 21490.0,
+      "p_value": 0.0,
+      "cohens_d": -0.3659,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Llama_3B",
+      "model_b": "Qwen25_7B",
+      "W": 11720.5,
+      "p_value": 0.0,
+      "cohens_d": -0.6419,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Llama_3B",
+      "model_b": "Qwen3_8B",
+      "W": 11586.5,
+      "p_value": 0.0,
+      "cohens_d": -0.6312,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Llama_3B",
+      "model_b": "Qwen3_8B_NT",
+      "W": 13557.5,
+      "p_value": 0.0,
+      "cohens_d": -0.6209,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Llama_3B",
+      "model_b": "Ministral_8B",
+      "W": 14394.0,
+      "p_value": 0.0,
+      "cohens_d": -0.6074,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Llama_3B",
+      "model_b": "Phi4_14B",
+      "W": 8894.0,
+      "p_value": 0.0,
+      "cohens_d": -0.7244,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Llama_3B",
+      "model_b": "Gemma4_31B",
+      "W": 18767.5,
+      "p_value": 0.0,
+      "cohens_d": -0.5142,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Gemma3_4B",
+      "model_b": "Qwen25_7B",
+      "W": 28046.5,
+      "p_value": 0.0,
+      "cohens_d": -0.3072,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Gemma3_4B",
+      "model_b": "Qwen3_8B",
+      "W": 22222.5,
+      "p_value": 0.0,
+      "cohens_d": -0.3314,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Gemma3_4B",
+      "model_b": "Qwen3_8B_NT",
+      "W": 26276.0,
+      "p_value": 0.0,
+      "cohens_d": -0.3053,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Gemma3_4B",
+      "model_b": "Ministral_8B",
+      "W": 26929.0,
+      "p_value": 0.0,
+      "cohens_d": -0.3083,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Gemma3_4B",
+      "model_b": "Phi4_14B",
+      "W": 17879.0,
+      "p_value": 0.0,
+      "cohens_d": -0.4167,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Gemma3_4B",
+      "model_b": "Gemma4_31B",
+      "W": 31154.5,
+      "p_value": 1e-06,
+      "cohens_d": -0.2074,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Qwen25_7B",
+      "model_b": "Qwen3_8B",
+      "W": 36213.0,
+      "p_value": 0.79639,
+      "cohens_d": -0.0112,
+      "significant": false,
+      "stars": "",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Qwen25_7B",
+      "model_b": "Qwen3_8B_NT",
+      "W": 34216.5,
+      "p_value": 0.559654,
+      "cohens_d": 0.0049,
+      "significant": false,
+      "stars": "",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Qwen25_7B",
+      "model_b": "Ministral_8B",
+      "W": 36775.5,
+      "p_value": 0.726677,
+      "cohens_d": -0.0056,
+      "significant": false,
+      "stars": "",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Qwen25_7B",
+      "model_b": "Phi4_14B",
+      "W": 33425.5,
+      "p_value": 0.192644,
+      "cohens_d": -0.0884,
+      "significant": false,
+      "stars": "",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Qwen25_7B",
+      "model_b": "Gemma4_31B",
+      "W": 40343.0,
+      "p_value": 0.001608,
+      "cohens_d": 0.0879,
+      "significant": true,
+      "stars": "**",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Qwen3_8B",
+      "model_b": "Qwen3_8B_NT",
+      "W": 15555.0,
+      "p_value": 0.241162,
+      "cohens_d": 0.0198,
+      "significant": false,
+      "stars": "",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Qwen3_8B",
+      "model_b": "Ministral_8B",
+      "W": 34368.5,
+      "p_value": 0.672565,
+      "cohens_d": 0.0058,
+      "significant": false,
+      "stars": "",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Qwen3_8B",
+      "model_b": "Phi4_14B",
+      "W": 26177.0,
+      "p_value": 0.226874,
+      "cohens_d": -0.0781,
+      "significant": false,
+      "stars": "",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Qwen3_8B",
+      "model_b": "Gemma4_31B",
+      "W": 28174.0,
+      "p_value": 0.000119,
+      "cohens_d": 0.0951,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Qwen3_8B_NT",
+      "model_b": "Ministral_8B",
+      "W": 37136.0,
+      "p_value": 0.853606,
+      "cohens_d": -0.0107,
+      "significant": false,
+      "stars": "",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Qwen3_8B_NT",
+      "model_b": "Phi4_14B",
+      "W": 25608.0,
+      "p_value": 0.040536,
+      "cohens_d": -0.0944,
+      "significant": true,
+      "stars": "*",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Qwen3_8B_NT",
+      "model_b": "Gemma4_31B",
+      "W": 26984.5,
+      "p_value": 0.00078,
+      "cohens_d": 0.0863,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Ministral_8B",
+      "model_b": "Phi4_14B",
+      "W": 33318.5,
+      "p_value": 0.175677,
+      "cohens_d": -0.0879,
+      "significant": false,
+      "stars": "",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Ministral_8B",
+      "model_b": "Gemma4_31B",
+      "W": 41161.5,
+      "p_value": 0.000164,
+      "cohens_d": 0.0895,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    },
+    {
+      "model_a": "Phi4_14B",
+      "model_b": "Gemma4_31B",
+      "W": 22554.5,
+      "p_value": 0.0,
+      "cohens_d": 0.1758,
+      "significant": true,
+      "stars": "***",
+      "n_pairs": 668
+    }
+  ]
+}

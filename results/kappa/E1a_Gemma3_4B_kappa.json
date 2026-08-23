@@ -1,0 +1,1234 @@
+{
+  "experiment": "E1a",
+  "model": "Gemma3-4B",
+  "exp_label": "BM25+Ulysses",
+  "judge_a": "meta-llama/Llama-3.3-70B-Instruct",
+  "judge_b": "google/gemini-2.5-flash (DeepInfra)",
+  "n_sample": 150,
+  "seed": 42,
+  "threshold": 0.5,
+  "judge_a_mean": 0.7253,
+  "judge_b_mean": 0.9233,
+  "judge_a_fallback_rate": 0.2667,
+  "judge_b_fallback_rate": 0.1,
+  "judge_a_faithful_rate": 0.7,
+  "judge_b_faithful_rate": 0.8867,
+  "cohens_kappa": {
+    "kappa": 0.1892,
+    "kappa_ci_lo": 0.0469,
+    "kappa_ci_hi": 0.3404,
+    "p_observed": 0.72,
+    "p_expected": 0.6547,
+    "agreement_rate": 0.72,
+    "n": 150,
+    "confusion": {
+      "tp": 98,
+      "tn": 10,
+      "fp": 35,
+      "fn": 7
+    },
+    "interpretation": "slight"
+  },
+  "per_query": [
+    {
+      "query_id": "363",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "307",
+      "llama_score": 0.5,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "697",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "158",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "546",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "320",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "523",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "344",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "25",
+      "llama_score": 0.5,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "551",
+      "llama_score": 0.0,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "289",
+      "llama_score": 0.0,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "529",
+      "llama_score": 1.0,
+      "gemini_score": 0.8,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "185",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "118",
+      "llama_score": 0.0,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "90",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "75",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "382",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "239",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "177",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "117",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "442",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "575",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "184",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "243",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "552",
+      "llama_score": 0.5,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "357",
+      "llama_score": 0.9,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "26",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "539",
+      "llama_score": 0.0,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "205",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "176",
+      "llama_score": 0.9,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "322",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "569",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "506",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "132",
+      "llama_score": 0.8,
+      "gemini_score": 0.7,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "624",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "517",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "345",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "673",
+      "llama_score": 0.5,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "372",
+      "llama_score": 0.5,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "147",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "253",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "463",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "675",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "269",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "245",
+      "llama_score": 0.9,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "490",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "163",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "694",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "368",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "173",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "532",
+      "llama_score": 0.5,
+      "gemini_score": 0.8,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "21",
+      "llama_score": 0.5,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "123",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "15",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "130",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "404",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "351",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "639",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "564",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "390",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "113",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "540",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "456",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "144",
+      "llama_score": 0.8,
+      "gemini_score": 0.8,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "263",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "440",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "82",
+      "llama_score": 0.8,
+      "gemini_score": 0.8,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "426",
+      "llama_score": 0.8,
+      "gemini_score": 0.8,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "577",
+      "llama_score": 0.8,
+      "gemini_score": 0.7,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "572",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "55",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "52",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "643",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "291",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "233",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "573",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "403",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "81",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "379",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "458",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "371",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "679",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "587",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "109",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "662",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "522",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "18",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "215",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "686",
+      "llama_score": 0.9,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "478",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "418",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "221",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "116",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "309",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "503",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "325",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "27",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "126",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "324",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "174",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "563",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "258",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "142",
+      "llama_score": 0.8,
+      "gemini_score": 0.8,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "261",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "542",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "706",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "731",
+      "llama_score": 0.5,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "112",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "50",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "491",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "600",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "355",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "227",
+      "llama_score": 0.0,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "674",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "352",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "525",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "250",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "369",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "197",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "34",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "516",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "341",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "412",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "541",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "53",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "65",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "103",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "627",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "37",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "480",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "99",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "295",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "74",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "437",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "203",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "509",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "305",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "140",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "145",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "468",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "656",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "330",
+      "llama_score": 0.5,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "661",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "207",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "202",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "136",
+      "llama_score": 0.8,
+      "gemini_score": 0.8,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "576",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "101",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "347",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "688",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    }
+  ]
+}

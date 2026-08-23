@@ -1,0 +1,120 @@
+{
+  "experiment": "E1b",
+  "label": "BGE-M3+Ulysses",
+  "dataset": "ulysses",
+  "retriever": "bgem3",
+  "ndcg": 0.311,
+  "n_queries": 668,
+  "oracle_model": "Qwen/Qwen2.5-72B-Instruct",
+  "judge_model": "meta-llama/Llama-3.3-70B-Instruct",
+  "models": {
+    "Llama-1B": {
+      "label": "Llama-1B",
+      "model": "meta-llama/Llama-3.2-1B-Instruct",
+      "provider": "deepinfra",
+      "n_queries": 668,
+      "bertscore_f1": 0.7668,
+      "rouge_l": 0.3585,
+      "faithfulness": 0.5466,
+      "latency_s": 6.091,
+      "tok_in_mean": 502.9,
+      "tok_out_mean": 198.0
+    },
+    "Llama-3B": {
+      "label": "Llama-3B",
+      "model": "meta-llama/Llama-3.2-3B-Instruct",
+      "provider": "deepinfra",
+      "n_queries": 668,
+      "bertscore_f1": 0.7669,
+      "rouge_l": 0.3605,
+      "faithfulness": 0.538,
+      "latency_s": 6.197,
+      "tok_in_mean": 502.9,
+      "tok_out_mean": 194.0
+    },
+    "Gemma3-4B": {
+      "label": "Gemma3-4B",
+      "model": "google/gemma-3-4b-it",
+      "provider": "deepinfra",
+      "n_queries": 668,
+      "bertscore_f1": 0.776,
+      "rouge_l": 0.366,
+      "faithfulness": 0.6683,
+      "latency_s": 5.69,
+      "tok_in_mean": 456.7,
+      "tok_out_mean": 174.0
+    },
+    "Qwen25-7B": {
+      "label": "Qwen25-7B",
+      "model": "Qwen/Qwen2.5-7B-Instruct",
+      "provider": "deepinfra",
+      "n_queries": 668,
+      "bertscore_f1": 0.7136,
+      "rouge_l": 0.237,
+      "faithfulness": 0.7627,
+      "latency_s": 13.567,
+      "tok_in_mean": 500.4,
+      "tok_out_mean": 586.9
+    },
+    "Phi4-14B": {
+      "label": "Phi4-14B",
+      "model": "microsoft/phi-4",
+      "provider": "deepinfra",
+      "n_queries": 668,
+      "bertscore_f1": 0.8206,
+      "rouge_l": 0.4603,
+      "faithfulness": 0.7895,
+      "latency_s": 5.814,
+      "tok_in_mean": 480.6,
+      "tok_out_mean": 310.3
+    },
+    "Gemma4-31B": {
+      "label": "Gemma4-31B",
+      "model": "google/gemma-4-31B-it",
+      "provider": "deepinfra",
+      "n_queries": 668,
+      "bertscore_f1": 0.787,
+      "rouge_l": 0.3978,
+      "faithfulness": 0.7337,
+      "latency_s": 8.388,
+      "tok_in_mean": 476.7,
+      "tok_out_mean": 170.4
+    },
+    "Qwen3-8B": {
+      "label": "Qwen3-8B",
+      "model": "qwen/qwen3-8b",
+      "provider": "openrouter",
+      "n_queries": 668,
+      "bertscore_f1": 0.8099,
+      "rouge_l": 0.4298,
+      "faithfulness": 0.7662,
+      "latency_s": 11.588,
+      "tok_in_mean": 500.4,
+      "tok_out_mean": 686.3
+    },
+    "Qwen3-8B-NT": {
+      "label": "Qwen3-8B-NT",
+      "model": "qwen/qwen3-8b",
+      "provider": "openrouter:no-thinking",
+      "n_queries": 668,
+      "bertscore_f1": 0.8102,
+      "rouge_l": 0.4332,
+      "faithfulness": 0.7612,
+      "latency_s": 11.98,
+      "tok_in_mean": 500.4,
+      "tok_out_mean": 673.3
+    },
+    "Ministral-8B": {
+      "label": "Ministral-8B",
+      "model": "mistralai/ministral-8b-2512",
+      "provider": "openrouter",
+      "n_queries": 668,
+      "bertscore_f1": 0.7717,
+      "rouge_l": 0.325,
+      "faithfulness": 0.7644,
+      "latency_s": 4.927,
+      "tok_in_mean": 463.4,
+      "tok_out_mean": 465.8
+    }
+  }
+}

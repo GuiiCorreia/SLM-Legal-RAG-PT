@@ -1,0 +1,402 @@
+{
+  "experiment": "E4a",
+  "model": "Qwen3-8B",
+  "exp_label": "BM25+NormasTCU",
+  "judge_a": "meta-llama/Llama-3.3-70B-Instruct",
+  "judge_b": "google/gemini-2.5-flash (DeepInfra)",
+  "n_sample": 46,
+  "seed": 42,
+  "threshold": 0.5,
+  "judge_a_mean": 0.5283,
+  "judge_b_mean": 0.537,
+  "judge_a_fallback_rate": 0.1522,
+  "judge_b_fallback_rate": 0.3478,
+  "judge_a_faithful_rate": 0.5435,
+  "judge_b_faithful_rate": 0.3696,
+  "cohens_kappa": {
+    "kappa": 0.4898,
+    "kappa_ci_lo": 0.2466,
+    "kappa_ci_hi": 0.7223,
+    "p_observed": 0.7391,
+    "p_expected": 0.4887,
+    "agreement_rate": 0.7391,
+    "n": 46,
+    "confusion": {
+      "tp": 15,
+      "tn": 19,
+      "fp": 2,
+      "fn": 10
+    },
+    "interpretation": "moderate"
+  },
+  "per_query": [
+    {
+      "query_id": "20",
+      "llama_score": 0.0,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "24",
+      "llama_score": 0.2,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "32",
+      "llama_score": 0.8,
+      "gemini_score": 0.7,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "14",
+      "llama_score": 0.0,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "25",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "8",
+      "llama_score": 0.5,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "31",
+      "llama_score": 0.0,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "35",
+      "llama_score": 0.0,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "16",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "3",
+      "llama_score": 0.0,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "43",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "1",
+      "llama_score": 0.0,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "47",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "27",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "10",
+      "llama_score": 0.5,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "40",
+      "llama_score": 0.0,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "37",
+      "llama_score": 0.5,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "45",
+      "llama_score": 0.5,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "49",
+      "llama_score": 0.0,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "34",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "33",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "29",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "26",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "23",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "28",
+      "llama_score": 0.5,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "42",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "46",
+      "llama_score": 0.2,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "4",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "21",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "19",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "48",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "13",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "41",
+      "llama_score": 0.5,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "50",
+      "llama_score": 0.5,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "2",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "30",
+      "llama_score": 0.0,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "5",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "38",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "7",
+      "llama_score": 0.0,
+      "gemini_score": 1.0,
+      "llama_label": 0,
+      "gemini_label": 1,
+      "agree": false
+    },
+    {
+      "query_id": "11",
+      "llama_score": 0.0,
+      "gemini_score": 0.0,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "15",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "17",
+      "llama_score": 0.8,
+      "gemini_score": 0.5,
+      "llama_label": 1,
+      "gemini_label": 0,
+      "agree": false
+    },
+    {
+      "query_id": "18",
+      "llama_score": 1.0,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "6",
+      "llama_score": 0.0,
+      "gemini_score": 0.5,
+      "llama_label": 0,
+      "gemini_label": 0,
+      "agree": true
+    },
+    {
+      "query_id": "9",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    },
+    {
+      "query_id": "44",
+      "llama_score": 0.8,
+      "gemini_score": 1.0,
+      "llama_label": 1,
+      "gemini_label": 1,
+      "agree": true
+    }
+  ]
+}
