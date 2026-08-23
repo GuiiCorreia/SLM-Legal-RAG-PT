@@ -1,8 +1,9 @@
 # Datasets (public; download separately — see README)
-*.csv
-bills_dataset.csv
-relevance_feedback_dataset.csv
-data/
+# NOTE: anchored to the repo root so they do NOT match the src/mestrado/data package.
+/*.csv
+/bills_dataset.csv
+/relevance_feedback_dataset.csv
+/data/
 
 # Python
 __pycache__/
