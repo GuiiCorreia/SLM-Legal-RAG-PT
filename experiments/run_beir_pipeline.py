@@ -1,5 +1,5 @@
 """
-BEIR Pipeline — Retrieval + Generation for JUÁ HuggingFace datasets.
+BEIR Pipeline -- Retrieval + Generation for JUÁ HuggingFace datasets.
 
 Runs the full SLM-RAG pipeline on any BEIR-format legal dataset:
   - ufca-llms/juris-tcu   (TCU acórdãos, EXCERTO-only, 0-3 scale)
@@ -271,7 +271,7 @@ def run_for_retriever(
 
         ckpt = load_ckpt(dataset_key, retriever_name, model)
         if ckpt and ckpt.get("query_ids") == query_ids and len(ckpt.get("responses", [])) == len(queries):
-            print(f"  ♻️  [{label}] checkpoint — skipping")
+            print(f"  ♻️  [{label}] checkpoint -- skipping")
             return model, {
                 "responses":           ckpt["responses"],
                 "tokens_in_avg":       ckpt["tokens_in_avg"],

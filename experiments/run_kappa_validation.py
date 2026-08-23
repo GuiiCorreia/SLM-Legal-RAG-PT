@@ -184,7 +184,7 @@ def run_kappa_for_config(dataset: str, retriever_name: str, n_sample: int, seed:
         print(f"  🧑‍⚖️  Judge ready: {model.split('/')[-1]}")
 
     # ── Evaluate with all 3 judges ───────────────────────────────────────────
-    print(f"\n  📊 Evaluating {len(queries)} × {len(judge_rags)} judges...")
+    print(f"\n  📊 Evaluating {len(queries)} x {len(judge_rags)} judges...")
 
     judge_scores: list[list[float]] = [[] for _ in judge_rags]
 
@@ -206,7 +206,7 @@ def run_kappa_for_config(dataset: str, retriever_name: str, n_sample: int, seed:
 
         for future in as_completed(futures):
             j_idx, score = future.result()
-            # We can't easily map back to query without refactoring — collect in order
+            # We can't easily map back to query without refactoring -- collect in order
             judge_scores[j_idx].append(score)
             pbar.update(1)
         pbar.close()
@@ -262,7 +262,7 @@ def run_kappa_for_config(dataset: str, retriever_name: str, n_sample: int, seed:
     }
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
-    print(f"  💾 Saved → {out_path}")
+    print(f"  💾 Saved -> {out_path}")
     return result
 
 

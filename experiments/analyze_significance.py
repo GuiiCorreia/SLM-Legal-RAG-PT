@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-analyze_significance.py — Statistical analysis of SLM-RAG generation experiments.
+analyze_significance.py -- Statistical analysis of SLM-RAG generation experiments.
 
 Computes (using per-query faithfulness from checkpoint files):
   1. Bootstrap 95% CI for mean Faithfulness per model (n_iterations=1000)
@@ -202,7 +202,7 @@ def analyze_experiment(exp_id: str, alpha: float) -> dict:
     out_path = OUT_DIR / f"{exp_id}_significance.json"
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
-    print(f"\n  Saved → {out_path}")
+    print(f"\n  Saved -> {out_path}")
     return result
 
 
@@ -227,7 +227,7 @@ def main():
     # Cross-experiment summary: per model, mean ± CI across experiments
     if len(args.exp) > 1:
         print(f"\n{'='*72}")
-        print(f"  CROSS-EXPERIMENT SUMMARY — mean Faithfulness")
+        print(f"  CROSS-EXPERIMENT SUMMARY -- mean Faithfulness")
         print(f"{'='*72}")
         print(f"  {'Model':<16}", end="")
         for exp_id in args.exp:
@@ -241,7 +241,7 @@ def main():
                 if m:
                     row += f"  {m['mean']:>6.4f}±{m['ci_high']-m['ci_low']:>.4f}"
                 else:
-                    row += f"  {'—':>12}"
+                    row += f"  {'--':>12}"
             print(row)
 
     print("\n✅ Analysis complete.")

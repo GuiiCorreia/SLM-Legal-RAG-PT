@@ -1,25 +1,25 @@
 #!/usr/bin/env python3
 """
-run_generation_2x2.py — 2×2 Factorial Generation (SLM-RAG-PT-BR Paper)
+run_generation_2x2.py -- 2x2 Factorial Generation (SLM-RAG-PT-BR Paper)
 
 Design (retrieval results April 2026, EXCERTO-only JurisTCU):
   E1a: BM25   + Ulysses   nDCG=0.545  primary Ulysses experiment
-  E1b: BGE-M3 + Ulysses   nDCG=0.311  retriever ablation (−43% vs BM25)
+  E1b: BGE-M3 + Ulysses   nDCG=0.311  retriever ablation (-43% vs BM25)
   E2a: BM25   + JurisTCU  nDCG=0.375  primary JurisTCU experiment
-  E2b: BGE-M3 + JurisTCU  nDCG=0.173  retriever ablation (−54% vs BM25)
+  E2b: BGE-M3 + JurisTCU  nDCG=0.173  retriever ablation (-54% vs BM25)
 
 Run order for paper (priority):
-  (1) E1a  → main Ulysses results  (~6-10h depending on API rate limits)
-  (2) E2a  → main JurisTCU results (~2-4h)
-  (3) E1b  → retriever ablation Ulysses
-  (4) E2b  → retriever ablation JurisTCU
+  (1) E1a  -> main Ulysses results  (~6-10h depending on API rate limits)
+  (2) E2a  -> main JurisTCU results (~2-4h)
+  (3) E1b  -> retriever ablation Ulysses
+  (4) E2b  -> retriever ablation JurisTCU
 
 Usage:
   uv run python run_generation_2x2.py --exp E1a
   uv run python run_generation_2x2.py --exp E2a
   uv run python run_generation_2x2.py --exp E1a --smoke        # 3 queries, 1 model
   uv run python run_generation_2x2.py --exp E1a --oracle-only  # build Oracle refs only
-  # Checkpoints are always loaded automatically — re-runs skip completed queries
+  # Checkpoints are always loaded automatically -- re-runs skip completed queries
 """
 import sys
 import json
@@ -47,8 +47,8 @@ BGE_MODEL = "BAAI/bge-m3"
 
 # ── Parallelism ────────────────────────────────────────────────────────────────
 # SLM pass fires 2 DeepInfra requests per query (SLM + Judge), so budget halved.
-N_WORKERS_ORACLE     = 20   # Oracle runs alone → can be aggressive
-N_WORKERS_DEEPINFRA  = 10   # SLM+Judge together; 10×8 models = 80 concurrent
+N_WORKERS_ORACLE     = 20   # Oracle runs alone -> can be aggressive
+N_WORKERS_DEEPINFRA  = 10   # SLM+Judge together; 10x8 models = 80 concurrent
 N_WORKERS_OPENROUTER = 15   # OpenRouter
 
 # ── Experiment Registry ────────────────────────────────────────────────────────
@@ -56,11 +56,11 @@ EXPERIMENTS = {
     "E1a": dict(dataset="ulysses",  retriever="bm25",  ndcg=0.545,
                 label="BM25+Ulysses",    description="Primary Ulysses experiment"),
     "E1b": dict(dataset="ulysses",  retriever="bgem3", ndcg=0.311,
-                label="BGE-M3+Ulysses",  description="Retriever ablation Ulysses (−43%)"),
+                label="BGE-M3+Ulysses",  description="Retriever ablation Ulysses (-43%)"),
     "E2a": dict(dataset="juristcu", retriever="bm25",  ndcg=0.375,
                 label="BM25+JurisTCU",   description="Primary JurisTCU experiment"),
     "E2b": dict(dataset="juristcu", retriever="bgem3", ndcg=0.173,
-                label="BGE-M3+JurisTCU", description="Retriever ablation JurisTCU (−54%)"),
+                label="BGE-M3+JurisTCU", description="Retriever ablation JurisTCU (-54%)"),
     # E3/E4: run retrieval first to fill nDCG values:
     #   uv run python run_experimento_retrieval.py --dataset br-taxqa
     #   uv run python run_experimento_retrieval.py --dataset normas-tcu
@@ -90,11 +90,11 @@ SLM_MODELS = [
 ]
 
 # Oracle: Qwen2.5 72B (Alibaba family, DeepInfra)
-#   — família Alibaba: separada de Llama (Judge) → elimina circular eval bias
-#   — multilingual frontier model; handles PT-BR
+#   -- família Alibaba: separada de Llama (Judge) -> elimina circular eval bias
+#   -- multilingual frontier model; handles PT-BR
 # Judge: Llama 3.3 70B (Meta family, DeepInfra)
-#   — validated κ=0.786 vs human raters (JudgeVerdict2025)
-#   — família Meta: separada de Alibaba (Oracle) → sem circular bias
+#   -- validated κ=0.786 vs human raters (JudgeVerdict2025)
+#   -- família Meta: separada de Alibaba (Oracle) -> sem circular bias
 ORACLE_MODEL = ("Oracle-72B", "Qwen/Qwen2.5-72B-Instruct", "deepinfra")
 JUDGE_MODEL  = ("Judge-70B",  "meta-llama/Llama-3.3-70B-Instruct", "deepinfra")
 
@@ -123,10 +123,10 @@ PROMPT_JURISTCU = (
     "Responda à consulta com base EXCLUSIVAMENTE nos acórdãos TCU fornecidos.\n"
     "REGRAS:\n"
     "(1) Cite explicitamente os números dos acórdãos (ex: Acórdão 358/2020).\n"
-    "(2) Utilize os acórdãos disponíveis mesmo que parcialmente relacionados — "
+    "(2) Utilize os acórdãos disponíveis mesmo que parcialmente relacionados -- "
     "indique cobertura limitada na observação.\n"
     "(3) Não invente informações além dos acórdãos.\n"
-    "(4) Seja objetivo — cite a jurisprudência TCU.\n"
+    "(4) Seja objetivo -- cite a jurisprudência TCU.\n"
     "(5) Formate: (a) acórdão principal, (b) relacionados, (c) observação."
 )
 
@@ -135,10 +135,10 @@ PROMPT_BRTAXQA = (
     "Responda à consulta com base EXCLUSIVAMENTE nos documentos tributários fornecidos.\n"
     "REGRAS:\n"
     "(1) Cite explicitamente os dispositivos legais relevantes (lei, artigo, instrução normativa).\n"
-    "(2) Utilize os documentos disponíveis mesmo que parcialmente relacionados — "
+    "(2) Utilize os documentos disponíveis mesmo que parcialmente relacionados -- "
     "indique cobertura limitada na observação.\n"
     "(3) Não invente informações além dos documentos.\n"
-    "(4) Seja objetivo — a consulta é de um profissional da área fiscal.\n"
+    "(4) Seja objetivo -- a consulta é de um profissional da área fiscal.\n"
     "(5) Formate: (a) fundamento principal, (b) documentos relacionados, (c) observação."
 )
 
@@ -147,10 +147,10 @@ PROMPT_NORMASTCU = (
     "Responda à consulta com base EXCLUSIVAMENTE nas normas TCU fornecidas.\n"
     "REGRAS:\n"
     "(1) Cite explicitamente os dispositivos normativos (número da norma, artigo).\n"
-    "(2) Utilize as normas disponíveis mesmo que parcialmente relacionadas — "
+    "(2) Utilize as normas disponíveis mesmo que parcialmente relacionadas -- "
     "indique cobertura limitada na observação.\n"
     "(3) Não invente informações além das normas.\n"
-    "(4) Seja objetivo — a consulta é de um auditor ou gestor público.\n"
+    "(4) Seja objetivo -- a consulta é de um auditor ou gestor público.\n"
     "(5) Formate: (a) norma principal, (b) normas relacionadas, (c) observação."
 )
 
@@ -359,7 +359,7 @@ def build_retriever(retriever_type: str, bills: dict, dataset_name: str):
         ret = BM25Retriever(bills)
         ret.build_index()
         return ret
-    else:  # bgem3 — cache re-used from run_experimento_retrieval.py
+    else:  # bgem3 -- cache re-used from run_experimento_retrieval.py
         cache = CACHE_DIR / dataset_name
         cache.mkdir(parents=True, exist_ok=True)
         ret = DenseRetriever(bills, model_name=BGE_MODEL)
@@ -393,14 +393,14 @@ def run_experiment(exp_id: str, smoke: bool, oracle_only: bool):
         queries = queries[:3]
         print(f"  🔥 Smoke mode: {len(queries)} queries only")
 
-    # 2 + 3. Retrieve contexts (cached — skips retriever build on reruns)
+    # 2 + 3. Retrieve contexts (cached -- skips retriever build on reruns)
     # Shared cache dir with analyze_judge_kappa.py
     ctx_cache_path = Path("results/kappa/ctx_cache") / f"{exp_id}_contexts.json"
     if ctx_cache_path.exists():
         print(f"\n📄 Carregando contextos do cache ({ctx_cache_path.name})...")
         with open(ctx_cache_path, encoding="utf-8") as f:
             contexts: dict[str, str] = json.load(f)
-        print(f"  ✅ {len(contexts)} contextos carregados — retriever não necessário")
+        print(f"  ✅ {len(contexts)} contextos carregados -- retriever não necessário")
     else:
         print(f"\n🔍 Building {ret_type.upper()} retriever...")
         retriever = build_retriever(ret_type, bills, dataset)
@@ -413,7 +413,7 @@ def run_experiment(exp_id: str, smoke: bool, oracle_only: bool):
         CACHE_DIR.mkdir(parents=True, exist_ok=True)
         with open(ctx_cache_path, "w", encoding="utf-8") as f:
             json.dump(contexts, f, ensure_ascii=False)
-        print(f"  💾 Contextos salvos → {ctx_cache_path}")
+        print(f"  💾 Contextos salvos -> {ctx_cache_path}")
 
     # 4. Oracle pass (generates BERTScore references)
     print(f"\n🔮 ORACLE: {ORACLE_MODEL[1]}")
@@ -450,7 +450,7 @@ def run_experiment(exp_id: str, smoke: bool, oracle_only: bool):
         print("\n  [--oracle-only] Done. Run without flag to generate SLM responses.")
         return None
 
-    # 5. SLM passes — Phase 1: all models generate in parallel
+    # 5. SLM passes -- Phase 1: all models generate in parallel
     judge_rag  = get_rag(*JUDGE_MODEL)
     model_list = SLM_MODELS[:1] if smoke else SLM_MODELS
     all_results: dict[str, dict] = {}
@@ -497,7 +497,7 @@ def run_experiment(exp_id: str, smoke: bool, oracle_only: bool):
             outer_pool.map(_gen_model, [(l, m, p) for l, m, p in model_list])
         )
 
-    # 5b. BERTScore + ROUGE-L — CPU-bound, sequential to avoid OOM
+    # 5b. BERTScore + ROUGE-L -- CPU-bound, sequential to avoid OOM
     label_to_meta = {l: (m, p) for l, m, p in model_list}
     for label, slm_data in model_outputs:
         model_id, provider = label_to_meta[label]
@@ -552,20 +552,20 @@ def run_experiment(exp_id: str, smoke: bool, oracle_only: bool):
 
     # Print summary table
     print(f"\n{'='*72}")
-    print(f"  SUMMARY — {exp_id}: {cfg['label']}")
+    print(f"  SUMMARY -- {exp_id}: {cfg['label']}")
     print(f"{'='*72}")
     print(f"  {'Model':<14} {'BERTScore':>10} {'ROUGE-L':>8} {'Faith':>7} {'lat(s)':>7}")
     print(f"  {'─'*54}")
     for lbl, r in all_results.items():
         print(f"  {lbl:<14} {r['bertscore_f1']:>10.4f} {r['rouge_l']:>8.4f}"
               f" {r['faithfulness']:>7.4f} {r['latency_s']:>7.2f}")
-    print(f"\n  💾 Saved → {out_path}")
+    print(f"\n  💾 Saved -> {out_path}")
     return final
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="2×2 Factorial Generation Experiment for SLM-RAG-PT-BR Paper",
+        description="2x2 Factorial Generation Experiment for SLM-RAG-PT-BR Paper",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
     )

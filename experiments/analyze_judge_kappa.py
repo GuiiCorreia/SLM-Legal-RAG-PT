@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-analyze_judge_kappa.py — Cohen's Kappa inter-rater agreement.
+analyze_judge_kappa.py -- Cohen's Kappa inter-rater agreement.
 
 Compares Llama 3.3 70B (primary judge, scores in checkpoints) against
 Gemini 2.5-flash (second judge, called here) on the same (context, response) pairs.
@@ -16,7 +16,7 @@ Steps:
 
 Requirements:
   - GEMINI_API_KEY in .env
-  - openai Python package (already installed — Gemini supports OpenAI-compatible API)
+  - openai Python package (already installed -- Gemini supports OpenAI-compatible API)
 
 Usage:
   uv run python analyze_judge_kappa.py --exp E1a --model Ministral-8B --n 150
@@ -101,7 +101,7 @@ def _safe(s: str) -> str:
 _FALLBACK_SAMPLES: list[str] = []   # filled on first parse failures, for diagnostics
 
 def _parse_faith(content: str) -> float:
-    # 1. Decimal score: 0.0–1.0 (dot or comma, any number of decimal digits)
+    # 1. Decimal score: 0.0-1.0 (dot or comma, any number of decimal digits)
     m = re.search(r'\b(1\.0+|0\.\d+|1,0+|0,\d+)\b', content)
     if m:
         return min(1.0, float(m.group(1).replace(",", ".")))
@@ -121,7 +121,7 @@ def _parse_faith(content: str) -> float:
         return 0.5
     if any(w in cl for w in ("infiel", "não fiel", "unfaithful", "not faithful", "hallucin")):
         return 0.0
-    # 5. True fallback — log raw output for the first 3 occurrences so we can diagnose
+    # 5. True fallback -- log raw output for the first 3 occurrences so we can diagnose
     if len(_FALLBACK_SAMPLES) < 3:
         _FALLBACK_SAMPLES.append(repr(content[:300]))
         print(f"\n  [FALLBACK DEBUG] raw='{content[:300]}'")
@@ -188,10 +188,10 @@ def load_or_build_contexts(exp_id: str, dataset: str, ret_type: str,
     missing = needed_qids - set(cached.keys())
 
     if not missing:
-        print(f"  ✅ Contextos carregados do cache ({len(cached)} entradas) — sem retrieval necessário")
+        print(f"  ✅ Contextos carregados do cache ({len(cached)} entradas) -- sem retrieval necessário")
         return {qid: cached[qid] for qid in needed_qids}
 
-    print(f"  📦 Cache: {len(cached)} hits | {len(missing)} miss → reconstruindo via retrieval...")
+    print(f"  📦 Cache: {len(cached)} hits | {len(missing)} miss -> reconstruindo via retrieval...")
 
     bills, queries = load_dataset(dataset)
     retriever = build_retriever(ret_type, bills, dataset)
@@ -206,7 +206,7 @@ def load_or_build_contexts(exp_id: str, dataset: str, ret_type: str,
     # Persist updated cache
     with open(cache_path, "w", encoding="utf-8") as f:
         json.dump(cached, f, ensure_ascii=False)
-    print(f"  💾 Cache salvo → {cache_path} ({len(cached)} entradas)")
+    print(f"  💾 Cache salvo -> {cache_path} ({len(cached)} entradas)")
 
     return {qid: cached[qid] for qid in needed_qids if qid in cached}
 
@@ -337,7 +337,7 @@ def analyze(exp_id: str, model_label: str, n_sample: int, seed: int) -> dict:
     qid2resp  = dict(zip(qids, responses))
     qid2faith = dict(zip(qids, llama_scores))
 
-    # 1. Contexts (cached — skip dataset load + retrieval on subsequent runs)
+    # 1. Contexts (cached -- skip dataset load + retrieval on subsequent runs)
     print("\n📄 Contextos...")
     qid2ctx = load_or_build_contexts(exp_id, dataset, ret_type, set(qids))
 
@@ -371,7 +371,7 @@ def analyze(exp_id: str, model_label: str, n_sample: int, seed: int) -> dict:
     llama_list  = [qid2faith[qid] for qid in sample_ids]
     gemini_list = [gemini_scores[qid] for qid in sample_ids]
 
-    # 6. Binarize (threshold > 0.5 → faithful=1, else 0)
+    # 6. Binarize (threshold > 0.5 -> faithful=1, else 0)
     THRESHOLD = 0.5
     llama_bin  = [1 if s > THRESHOLD else 0 for s in llama_list]
     gemini_bin = [1 if s > THRESHOLD else 0 for s in gemini_list]
@@ -386,7 +386,7 @@ def analyze(exp_id: str, model_label: str, n_sample: int, seed: int) -> dict:
 
     # 8. Print results
     print(f"\n{'─'*72}")
-    print(f"  RESULTADOS — {exp_id} / {model_label}")
+    print(f"  RESULTADOS -- {exp_id} / {model_label}")
     print(f"{'─'*72}")
     print(f"\n  Distribuição de scores:")
     print(f"  {'':20}  {'Llama 70B':>10}  {'Gemini 2.5':>10}")
@@ -396,7 +396,7 @@ def analyze(exp_id: str, model_label: str, n_sample: int, seed: int) -> dict:
 
     print(f"\n  Cohen's Kappa: {kappa_result['kappa']:.4f}  "
           f"[{kappa_result['kappa_ci_lo']:.4f}, {kappa_result['kappa_ci_hi']:.4f}]  "
-          f"— {kappa_result['interpretation']}")
+          f"-- {kappa_result['interpretation']}")
     print(f"  Observed agreement: {kappa_result['agreement_rate']:.1%}")
     print(f"  Expected agreement: {kappa_result['p_expected']:.1%}")
     print(f"  Confusion matrix: TP={kappa_result['confusion']['tp']}  "
@@ -436,13 +436,13 @@ def analyze(exp_id: str, model_label: str, n_sample: int, seed: int) -> dict:
     out_path = OUT_DIR / f"{exp_id}_{safe_model}_kappa.json"
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
-    print(f"\n  💾 Salvo → {out_path}")
+    print(f"\n  💾 Salvo -> {out_path}")
     return result
 
 
 def print_cross_model_summary(all_results: list[dict]):
     print(f"\n{'='*72}")
-    print(f"  RESUMO CROSS-MODEL — Cohen's Kappa (Llama 70B vs Gemini 2.5-flash)")
+    print(f"  RESUMO CROSS-MODEL -- Cohen's Kappa (Llama 70B vs Gemini 2.5-flash)")
     print(f"{'='*72}")
     print(f"  {'Exp':<6} {'Modelo':<16} {'n':>4}  {'κ':>7}  {'95% CI':>18}  {'Agree':>7}  {'Interp'}")
     print(f"  {'─'*70}")
