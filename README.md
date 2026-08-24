@@ -2,11 +2,13 @@
 
 Code, experiment outputs, and reproduction instructions for:
 
-> **Small Language Models for Legal RAG in Portuguese: A 4×2 Cross-Domain
+> **Small Language Models for Legal RAG in Portuguese: A 4x2 Cross-Domain
 > Evaluation of Faithfulness, Retrieval Strategies, and Model Scale**
-> Guilherme Correia Dutra, Nádia Félix Felipe da Silva
-> Instituto de Informática, Universidade Federal de Goiás (UFG)
-> **ENIAC 2026** (accepted)
+> Guilherme Correia Dutra, André Felipe dos Santos Caraíba, Nádia Felix,
+> Daniel Ribeiro da Silva, Állan Christoffer Pereira Silva, Paulo Victor dos
+> Santos, Pedro Henrique Machado da Silva Albernaz, Sávio Salvarino Teles de
+> Oliveira
+> **ENIAC 2026** (accepted, to appear)
 
 A 4×2 factorial evaluation of Retrieval-Augmented Generation over Brazilian
 Portuguese legal text: four sub-domains of the JUÁ benchmark × two retrievers
@@ -179,13 +181,19 @@ Runs are checkpointed: re-invoking a completed experiment reuses
 
 ```bibtex
 @inproceedings{dutra2026slm,
-  title     = {Small Language Models for Legal {RAG} in {P}ortuguese: A 4$\times$2
+  title     = {Small Language Models for Legal {RAG} in {P}ortuguese: A 4x2
                Cross-Domain Evaluation of Faithfulness, Retrieval Strategies,
                and Model Scale},
-  author    = {Dutra, Guilherme Correia and Félix Felipe da Silva, Nádia},
-  booktitle = {Anais do XXII Encontro Nacional de Inteligência Artificial e
-               Computacional (ENIAC)},
-  year      = {2026}
+  author    = {Dutra, Guilherme Correia and Cara{\'i}ba, Andr{\'e} Felipe dos
+               Santos and Felix, N{\'a}dia and Silva, Daniel Ribeiro da and
+               Silva, {\'A}llan Christoffer Pereira and Santos, Paulo Victor
+               dos and Albernaz, Pedro Henrique Machado da Silva and Oliveira,
+               S{\'a}vio Salvarino Teles de},
+  booktitle = {Proceedings of the Encontro Nacional de Intelig{\^e}ncia
+               Artificial e Computacional (ENIAC 2026)},
+  publisher = {SBC},
+  year      = {2026},
+  note      = {To appear}
 }
 ```
 
