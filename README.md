@@ -4,10 +4,8 @@ Code, experiment outputs, and reproduction instructions for:
 
 > **Small Language Models for Legal RAG in Portuguese: A 4x2 Cross-Domain
 > Evaluation of Faithfulness, Retrieval Strategies, and Model Scale**
-> Guilherme Correia Dutra, André Felipe dos Santos Caraíba, Nádia Felix,
-> Daniel Ribeiro da Silva, Állan Christoffer Pereira Silva, Paulo Victor dos
-> Santos, Pedro Henrique Machado da Silva Albernaz, Sávio Salvarino Teles de
-> Oliveira
+> Guilherme Dutra, André Caraíba, Nádia Felix, Daniel Ribeiro, Állan Silva,
+> Paulo Victor dos Santos, Pedro Albernaz, Sávio Teles
 > **ENIAC 2026** (accepted, to appear)
 
 A 4×2 factorial evaluation of Retrieval-Augmented Generation over Brazilian
@@ -184,11 +182,9 @@ Runs are checkpointed: re-invoking a completed experiment reuses
   title     = {Small Language Models for Legal {RAG} in {P}ortuguese: A 4x2
                Cross-Domain Evaluation of Faithfulness, Retrieval Strategies,
                and Model Scale},
-  author    = {Dutra, Guilherme Correia and Cara{\'i}ba, Andr{\'e} Felipe dos
-               Santos and Felix, N{\'a}dia and Silva, Daniel Ribeiro da and
-               Silva, {\'A}llan Christoffer Pereira and Santos, Paulo Victor
-               dos and Albernaz, Pedro Henrique Machado da Silva and Oliveira,
-               S{\'a}vio Salvarino Teles de},
+  author    = {Dutra, Guilherme and Cara{\'i}ba, Andr{\'e} and Felix, N{\'a}dia
+               and Ribeiro, Daniel and Silva, {\'A}llan and Santos, Paulo Victor
+               dos and Albernaz, Pedro and Teles, S{\'a}vio},
   booktitle = {Proceedings of the Encontro Nacional de Intelig{\^e}ncia
                Artificial e Computacional (ENIAC 2026)},
   publisher = {SBC},
