@@ -1,0 +1,151 @@
+{
+  "timestamp": "20260424_2355",
+  "n_queries_per_dataset": 700,
+  "bm25_top_k": 50,
+  "dense_enabled": true,
+  "dense_models": {
+    "minilm": "paraphrase-multilingual-MiniLM-L12-v2",
+    "bge_m3": "BAAI/bge-m3"
+  },
+  "seed": 42,
+  "results": {
+    "ulysses": {
+      "dataset": "Ulysses",
+      "n_queries_sampled": 668,
+      "n_queries_total": 668,
+      "seed": 42,
+      "bm25_top_k": 50,
+      "systems": {
+        "bm25": {
+          "system": "BM25 Okapi",
+          "nDCG@5": 0.557,
+          "nDCG@10": 0.5454,
+          "MRR": 0.7667,
+          "Recall@10": 0.4974,
+          "MAP": 0.4644,
+          "latency_avg_s": 9.386,
+          "n_queries": 668
+        },
+        "dense_minilm": {
+          "system": "Dense MiniLM-384",
+          "nDCG@5": 0.201,
+          "nDCG@10": 0.19,
+          "MRR": 0.3724,
+          "Recall@10": 0.1609,
+          "MAP": 0.1236,
+          "latency_avg_s": 0.001,
+          "n_queries": 668
+        },
+        "dense_bge_m3": {
+          "system": "Dense BGE-M3-1024",
+          "nDCG@5": 0.3219,
+          "nDCG@10": 0.3111,
+          "MRR": 0.5266,
+          "Recall@10": 0.2692,
+          "MAP": 0.2236,
+          "latency_avg_s": 0.004,
+          "n_queries": 668
+        },
+        "hybrid": {
+          "system": "Hybrid BM25+BGE-M3",
+          "nDCG@5": 0.5274,
+          "nDCG@10": 0.5026,
+          "MRR": 0.758,
+          "Recall@10": 0.4368,
+          "MAP": 0.4201,
+          "latency_avg_s": 1.466,
+          "n_queries": 668
+        }
+      },
+      "significance_tests_vs_bm25": {
+        "Dense MiniLM-384": {
+          "p_value": 0.0,
+          "significant_p05": true,
+          "delta_ndcg10": -0.3553,
+          "delta_pct": -65.15
+        },
+        "Dense BGE-M3-1024": {
+          "p_value": 0.0,
+          "significant_p05": true,
+          "delta_ndcg10": -0.2342,
+          "delta_pct": -42.95
+        },
+        "Hybrid BM25+BGE-M3": {
+          "p_value": 1e-06,
+          "significant_p05": true,
+          "delta_ndcg10": -0.0428,
+          "delta_pct": -7.85
+        }
+      }
+    },
+    "juristcu": {
+      "dataset": "JurisTCU",
+      "n_queries_sampled": 150,
+      "n_queries_total": 150,
+      "seed": 42,
+      "bm25_top_k": 50,
+      "systems": {
+        "bm25": {
+          "system": "BM25 Okapi",
+          "nDCG@5": 0.4198,
+          "nDCG@10": 0.3746,
+          "MRR": 0.7045,
+          "Recall@10": 0.2628,
+          "MAP": 0.2428,
+          "latency_avg_s": 1.127,
+          "n_queries": 150
+        },
+        "dense_minilm": {
+          "system": "Dense MiniLM-384",
+          "nDCG@5": 0.0778,
+          "nDCG@10": 0.0679,
+          "MRR": 0.198,
+          "Recall@10": 0.0486,
+          "MAP": 0.0308,
+          "latency_avg_s": 0.001,
+          "n_queries": 150
+        },
+        "dense_bge_m3": {
+          "system": "Dense BGE-M3-1024",
+          "nDCG@5": 0.2039,
+          "nDCG@10": 0.1727,
+          "MRR": 0.4316,
+          "Recall@10": 0.1175,
+          "MAP": 0.0834,
+          "latency_avg_s": 0.002,
+          "n_queries": 150
+        },
+        "hybrid": {
+          "system": "Hybrid BM25+BGE-M3",
+          "nDCG@5": 0.2908,
+          "nDCG@10": 0.2531,
+          "MRR": 0.5576,
+          "Recall@10": 0.1803,
+          "MAP": 0.1683,
+          "latency_avg_s": 0.103,
+          "n_queries": 150
+        }
+      },
+      "significance_tests_vs_bm25": {
+        "Dense MiniLM-384": {
+          "p_value": 0.0,
+          "significant_p05": true,
+          "delta_ndcg10": -0.3067,
+          "delta_pct": -81.87
+        },
+        "Dense BGE-M3-1024": {
+          "p_value": 0.0,
+          "significant_p05": true,
+          "delta_ndcg10": -0.2019,
+          "delta_pct": -53.89
+        },
+        "Hybrid BM25+BGE-M3": {
+          "p_value": 0.0,
+          "significant_p05": true,
+          "delta_ndcg10": -0.1215,
+          "delta_pct": -32.43
+        }
+      }
+    }
+  }
+}

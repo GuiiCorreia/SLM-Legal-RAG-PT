@@ -34,6 +34,7 @@ experiments/            scripts that produce every table in the paper
   analyze_token_usage.py    cost and latency accounting
 src/mestrado/           core package (data loaders, retrieval, generation, metrics)
 results/
+  retrieval/            four-system retrieval comparison    (Table 2)
   generation/           aggregated per-experiment results  (Tables 3-5)
   kappa/                inter-judge agreement + per-query   (Table 6)
   significance/         Wilcoxon test outputs
@@ -65,8 +66,13 @@ at temperature 0.1, 1024 output tokens.
 ## Results
 
 ### Table 2 — Retrieval nDCG@10
-`results/generation/*_results.json` (`ndcg` field) · † significantly different
-from BM25 (p<0.001) · ⋆ nDCG=0.000 from architectural truncation
+Source: `results/retrieval/retrieval_comparison_20260424_2355.json` (Ulysses,
+JurisTCU) and `retrieval_comparison_20260425_2054.json` (NormasTCU) — the full
+four-system comparison including MiniLM and Hybrid, with nDCG@5/10, MRR,
+Recall@10 and MAP per system. The BR-TaxQA column comes from the E3a/E3b runs
+(`results/generation/E3*_results.json`, `ndcg` field; no separate comparison file
+was kept for that corpus). † significantly different from BM25 (p<0.001) ·
+⋆ nDCG=0.000 from architectural truncation
 
 | System | Ulysses | JurisTCU | BR-TaxQA | NormasTCU |
 |---|---|---|---|---|

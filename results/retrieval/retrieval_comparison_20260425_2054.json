@@ -1,0 +1,82 @@
+{
+  "timestamp": "20260425_2054",
+  "n_queries_per_dataset": 700,
+  "bm25_top_k": 50,
+  "dense_enabled": true,
+  "dense_models": {
+    "minilm": "paraphrase-multilingual-MiniLM-L12-v2",
+    "bge_m3": "BAAI/bge-m3"
+  },
+  "seed": 42,
+  "results": {
+    "normas-tcu": {
+      "dataset": "NormasTCU",
+      "n_queries_sampled": 46,
+      "n_queries_total": 46,
+      "seed": 42,
+      "bm25_top_k": 50,
+      "systems": {
+        "bm25": {
+          "system": "BM25 Okapi",
+          "nDCG@5": 0.2997,
+          "nDCG@10": 0.3537,
+          "MRR": 0.4807,
+          "Recall@10": 0.3709,
+          "MAP": 0.2725,
+          "latency_avg_s": 0.556,
+          "n_queries": 46
+        },
+        "dense_minilm": {
+          "system": "Dense MiniLM-384",
+          "nDCG@5": 0.0,
+          "nDCG@10": 0.0,
+          "MRR": 0.0,
+          "Recall@10": 0.0,
+          "MAP": 0.0,
+          "latency_avg_s": 0.003,
+          "n_queries": 46
+        },
+        "dense_bge_m3": {
+          "system": "Dense BGE-M3-1024",
+          "nDCG@5": 0.0,
+          "nDCG@10": 0.0,
+          "MRR": 0.0006,
+          "Recall@10": 0.0,
+          "MAP": 0.0,
+          "latency_avg_s": 0.004,
+          "n_queries": 46
+        },
+        "hybrid": {
+          "system": "Hybrid BM25+BGE-M3",
+          "nDCG@5": 0.1893,
+          "nDCG@10": 0.2161,
+          "MRR": 0.3794,
+          "Recall@10": 0.2334,
+          "MAP": 0.1591,
+          "latency_avg_s": 0.103,
+          "n_queries": 46
+        }
+      },
+      "significance_tests_vs_bm25": {
+        "Dense MiniLM-384": {
+          "p_value": 0.0,
+          "significant_p05": true,
+          "delta_ndcg10": -0.3537,
+          "delta_pct": -100.0
+        },
+        "Dense BGE-M3-1024": {
+          "p_value": 0.0,
+          "significant_p05": true,
+          "delta_ndcg10": -0.3537,
+          "delta_pct": -100.0
+        },
+        "Hybrid BM25+BGE-M3": {
+          "p_value": 0.0,
+          "significant_p05": true,
+          "delta_ndcg10": -0.1377,
+          "delta_pct": -38.92
+        }
+      }
+    }
+  }
+}
